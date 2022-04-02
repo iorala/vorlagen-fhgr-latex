@@ -1,0 +1,91 @@
+\documentclass[10pt]{report}
+\usepackage{fontspec}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{lscape} 
+\usepackage{graphicx}
+\usepackage[nswissgerman]{babel}
+\usepackage[german = swiss]{csquotes} 
+\usepackage{float}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\newcommand{\titel}{$Titel der Arbeit}
+\newcommand{\desc}{$Name des Leistungsnachweis}
+\newcommand{\authors}{$Authoren}
+\newcommand{\lecturer}{$Betreuer}
+\newcommand{\module}{$Modul oder $Kurs}
+\newcommand{\program}{MScBA}
+\newcommand{\major}{Information and Data Management}
+\newcommand{\semester}{Frühlingsemester 2022}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{\footnotesize \titel}
+\chead{}
+\rhead{}
+\lfoot{\footnotesize \authors}
+\cfoot{}
+\rfoot{\footnotesize \thepage}
+
+\usepackage[a4paper, left=3cm, right=2.5cm, top=2.5cm, bottom=2cm]{geometry}
+\usepackage{times}
+\linespread{1.3}
+ 
+\usepackage[
+    backend=biber,
+    style=apa,
+  ]{biblatex}
+ \renewcommand{\arraystretch}{1.7}
+ \addbibresource{referenzen.bib}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+{\scshape\LARGE \titel \par}
+\vspace{1.5cm}
+    \LARGE
+	\textbf{\desc}
+\end{center}
+\begin{center}
+	\vspace{5cm}
+	\large
+	\begin{tabular}{l l}
+    Modul: & \module \\
+    Autoren: & \authors\\
+    Referent: & \lecturer \\
+    Datum: & \today \\
+  \end{tabular}
+\end{center}
+
+\end{titlepage}
+
+\newpage 
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+\chapter{Einleitung}
+
+Hello World \cite{LUNDY20151057} Hier kommt der Text
+
+\chapter{Projektplan}
+
+
+\chapter{Hauptteil}
+
+\chapter{Schluss}
+
+\newpage
+\appendix
+\chapter{An Introduction to Lua\TeX}
+\section{Nochwas}
+\section{Irgendwas}
+
+\newpage
+\printbibliography
+
+\end{document}
